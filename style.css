@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-primary-color: rgb(45, 40, 40);
+    --bg-fill-color: rgb(245, 199, 199);
+    --bg-food-color: rgb(244, 83, 131);
+    
+    --text-primary-color: rgb(251, 231, 231);
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-2xl: 40px;
+    
+    --border-primary-color: #333333;
+    --border-radius-sm: 8px;
+}
+html, body {
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-primary-color);
+    color: var(--text-primary-color);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+main, section {
+    width: 100%;
+    height: 100%;
+}
+.btn {
+    padding: var(--space-sm) var(--space-md);
+    border: none;
+    border-radius: var(--border-radius-sm);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn:hover {
+    transform: scale(1.1);
+}   
+section {
+    padding: var(--space-2xl);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: var(--space-lg);
+}
+.infos {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.info {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--text-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+.board {
+    border: 1px solid var(--border-primary-color);
+    flex-grow: 1;
+    display: grid;
+}
+.block {
+    border: 1px solid var(--border-primary-color);
+    border-radius: var(--border-radius-sm);
+}
+.fill {
+    background-color: var(--bg-fill-color);
+}
+.food {
+    background-color: var(--bg-food-color);
+}
+.modal {
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #35353587;
+    backdrop-filter: blur(2px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.modal .start-game,
+.modal .game-over {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-lg);
+}
+.modal .game-over {
+    display: none;
+}
